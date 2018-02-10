@@ -90,7 +90,7 @@ app.post(
                                         return res.status(400).json({message: "content type is not support"})
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/sites/" + req.params.siteId + "/" + "widget"
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .upload(
                                             req.file.path,
                                             {
@@ -151,7 +151,7 @@ app.post(
                                         return res.status(400).json({message: "content type is not support"})
 
                                     let destination = "organizations/" + req.params.organizationId + "/users/" + req.params.userId + "/" + "avatar"
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .upload(
                                             req.file.path,
                                             {
@@ -208,7 +208,7 @@ app.post(
                                         return res.status(400).json({message: "content type is not support"})
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/visitors/" + req.params.visitorId + "/" + Math.random().toString(36).slice(-8)
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .upload(
                                             req.file.path,
                                             {
@@ -258,7 +258,7 @@ app.delete(
                                         return res.status(403).json({message: "forbidden"})
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/visitors/" + req.params.imageFileName
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .file(destination)
                                         .delete()
                                         .then(_ =>
@@ -310,7 +310,7 @@ app.post(
                                         return res.status(400).json({message: "content type is not support"})
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/visitors/" + req.params.visitorId + "/" + Math.random().toString(36).slice(-8)
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .upload(
                                             req.file.path,
                                             {
@@ -361,7 +361,7 @@ app.delete(
                                     //     return res.status(401)
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/visitors/" + req.params.imageFileName
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .file(destination)
                                         .delete()
                                         .then(_ =>
@@ -412,7 +412,7 @@ app.post(
                                         return res.status(400).json({message: "content type is not support"})
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/documents/images/" + Math.random().toString(36).slice(-8)
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .upload(
                                             req.file.path,
                                             {
@@ -462,7 +462,7 @@ app.delete(
                                     //     return res.status(401)
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/documents/images/" + req.params.imageFileName
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .file(destination)
                                         .delete()
                                         .then(_ =>
@@ -515,7 +515,7 @@ app.post(
                                         return res.status(400).json({message: "content type is not support"})
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/documents/videos/" + Math.random().toString(36).slice(-8)
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .upload(
                                             req.file.path,
                                             {
@@ -565,7 +565,7 @@ app.delete(
                                     //     return res.status(401)
                                     
                                     let destination = "organizations/" + req.params.organizationId + "/documents/videos/" + req.params.imageFileName
-                                    gcs.bucket("everychat81")
+                                    gcs.bucket("familiar-chat")
                                         .file(destination)
                                         .delete()
                                         .then(_ =>
