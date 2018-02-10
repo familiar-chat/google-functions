@@ -1,7 +1,7 @@
 "use strict";
 
 // input baseUrl
-const baseUrl = "";
+const baseUrl = "https://storage.googleapis.com/familiar-chat";
 
 const functions = require("firebase-functions");
 const admin     = require("firebase-admin");
