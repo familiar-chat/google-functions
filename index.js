@@ -407,6 +407,8 @@ app.post(
                                     
                                     // if(user.roles == "master")
                                     //     return res.status(401)
+                                    console.log(req)
+                                    console.log(req.file)
 
                                     if(!req.file.mimetype || req.file.mimetype.indexOf("image/") != 0)
                                         return res.status(400).json({message: "content type is not support"})
